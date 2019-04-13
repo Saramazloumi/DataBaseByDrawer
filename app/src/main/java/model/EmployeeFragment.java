@@ -28,6 +28,7 @@ public class EmployeeFragment extends android.app.Fragment {
         super.onActivityCreated(savedInstanceState);
 
         Employee employee = (Employee) getArguments().getSerializable("key");
+
            if (employee instanceof FullTime){
 
                TextView textViewTd = (TextView)getActivity().findViewById(R.id.editTextId);
@@ -42,12 +43,12 @@ public class EmployeeFragment extends android.app.Fragment {
                textViewName.setText(employee.name);
                textViewJob.setText(employee.job);
                textViewStartDate.setText(((FullTime) employee).getFStartDate());
-               textViewSalary.setText(String.valueOf(((FullTime) employee).getFSalary()));
+               textViewSalary.setText(String.valueOf(((FullTime) employee).getFSalary()) + " $");
                textViewEndDate.setVisibility(EditText.INVISIBLE);
                textViewPerWeek.setVisibility(EditText.INVISIBLE);
 
            }else if (employee instanceof Contractor){
-               
+
                TextView textViewId = (TextView)getActivity().findViewById(R.id.editTextId);
                TextView textViewName = (TextView)getActivity().findViewById(R.id.editTextName);
                TextView textViewJob = (TextView)getActivity().findViewById(R.id.editTextJob);
@@ -62,7 +63,7 @@ public class EmployeeFragment extends android.app.Fragment {
                textViewStartDate.setText(((Contractor) employee).getcStartDate());
                textViewEndDate.setVisibility(EditText.VISIBLE);
                textViewEndDate.setText(((Contractor) employee).getEndDate());
-               textViewSalary.setText(String.valueOf(((Contractor) employee).getcSalary()) + " Per hour");
+               textViewSalary.setText(String.valueOf(((Contractor) employee).getcSalary()) + " $ Per hour");
                textViewPerWeek.setVisibility(EditText.VISIBLE);
                textViewPerWeek.setText(String.valueOf(((Contractor) employee).getNhPerWeek()));
            }
