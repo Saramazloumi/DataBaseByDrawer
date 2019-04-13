@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     ListView listViewPersons;
 
     ArrayList<Employee> listOfEmployee;
-    ArrayList<Employee> listOfFullTime;
-    ArrayList<Employee> listOfContractors;
     ArrayAdapter<Employee> adapter;
 
     @Override
@@ -46,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listViewPersons.setOnItemClickListener(this);
 
         listOfEmployee = new ArrayList<Employee>();
-        listOfFullTime = new ArrayList<Employee>();
-        listOfContractors = new ArrayList<Employee>();
 
         listOfEmployee = FileManager.readFile(this,"Person.txt");
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listOfEmployee);
@@ -74,12 +70,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         fragmentTransaction.replace(R.id.main_ui, employeeFragment);
         fragmentTransaction.commit();
         drawerLayout.closeDrawer(listViewPersons);
-
-
-
-
-
-
     }
 
 

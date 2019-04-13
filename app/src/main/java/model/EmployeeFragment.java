@@ -15,12 +15,6 @@ import java.util.StringTokenizer;
 
 public class EmployeeFragment extends android.app.Fragment {
 
-    ArrayList<Employee> listOfEmployee;
-
-
-    FullTime f;
-    Contractor c;
-
     //set the layout
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
