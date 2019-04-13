@@ -1,0 +1,10 @@
+F,Sara,F143,Programmer,Jan2019,3500
+F,Morteza,F993,3DMax,Feb2019,4000
+F,Philip,F890,Programmer,Jan2019,3500
+F,Merry,F650,Accountant,March2019,2600
+F,Rico,F123,Network,Feb2019,3000
+C,Larry,C567,Debuger,Jan2019,June2019,20,25
+C,Yann,C500,Assistant,April2019,Aug2019,18,30
+C,Jack,C200,Technician,April2019,Aug2019,19,25
+C,John,C300,Admin,Jan2019,June2019,20,25
+C,Megan,C400,Planner,Jan2019,June2019,25,30
